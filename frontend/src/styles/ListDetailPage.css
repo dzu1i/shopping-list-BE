@@ -1,0 +1,268 @@
+.detail-page{
+  min-height:100svh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:40px 16px;
+  background:transparent;
+}
+
+.detail-card{
+  width:min(760px,95vw);
+  background: radial-gradient(
+    130% 150% at 10% 0%,
+    #f7fff7 0%,
+    #eef8ee 45%,
+    #d9ecd9 100%
+  );
+  border-radius:var(--radius-lg);
+  padding:18px 20px;
+  box-shadow:var(--shadow-soft);
+  position:relative;
+  border:1px solid rgba(255,255,255,.8);
+}
+
+.detail-panel{
+  margin-top:12px; background:var(--panel); border-radius:18px; padding:16px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+  position:relative;
+  padding-bottom:84px;
+}
+
+.header{
+  display:flex; align-items:center; gap:16px; margin-bottom:8px;
+}
+.title {
+  margin:0;
+  font-size:42px;
+  font-weight:700;
+  line-height:1.05;
+  letter-spacing:0.01em;
+  font-family: "Quicksand", sans-serif;
+}
+
+.title-input {
+  font-size:32px;
+  font-weight:600;
+  border-radius:16px;
+  border:1px solid #b6c9b6;
+  padding:10px 16px;
+  background:#f9fff9;
+  box-shadow:0 2px 0 rgba(0,0,0,.04);
+  outline:none;
+  transition:.15s;
+  font-family: "Quicksand", sans-serif;
+}
+
+.title-input:focus {
+  border-color:#6ea86e;
+  box-shadow:0 0 0 2px rgba(110,168,110,.35);
+  background:white;
+}
+.date{font-size:12px; color:var(--muted)}
+
+.icon-btn{
+  width:46px; height:46px; border-radius:999px; border:none; cursor:pointer;
+  box-shadow:0 2px 0 rgba(0,0,0,.08); color:#fff; font-weight:800;
+}
+.icon-done{ background: var(--ok); }
+.icon-idle{ background: rgba(255,255,255,.6); color:#1f2b1f; }
+
+.members-box{
+  background: rgba(255,255,255,.7);
+  border-radius:12px; padding:10px ; margin-bottom:10px;
+  border:1px solid #d8e7d8;
+}
+.members-header{
+  display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;
+  font-size:14px; font-weight:600;
+}
+.role-badge{
+  font-size:12px; padding:2px 8px; border-radius:999px;
+  background:#dbeadb; color:#234023;
+}
+.members-list{
+  display:flex; flex-wrap:wrap; gap:6px;
+}
+.member-pill{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:4px 8px; border-radius:999px;
+  background:#eef8ec; font-size:13px;
+}
+.member-remove{
+  border:none; background:transparent; cursor:pointer; font-weight:800; color:#b25555;
+}
+.members-add{
+  display:flex; gap:8px; margin-top:8px;
+}
+.members-add input{
+  flex:1; padding:6px 8px; border-radius:8px; border:1px solid #b6c9b6;
+}
+.members-add button{
+  padding:6px 10px; border-radius:8px; border:none; background:#4d6a4d; color:#fff; font-weight:600; cursor:pointer;
+}
+.leave-btn{
+  margin-top:8px; padding:6px 10px; border-radius:8px; border:none;
+  background:#c37070; color:#fff; font-size:13px; cursor:pointer;
+}
+
+.filter-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:8px;
+  margin-top:6px;
+  gap: 12px;
+  font-size:14px;
+}
+
+.filter-group{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.filter-label{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.filter-buttons{
+  display:flex;
+  gap:6px;
+}
+
+.filter-buttons button{
+  border:none;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:13px;
+  cursor:pointer;
+  background:transparent;
+  color:var(--muted);
+  transition:background 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+
+.filter-buttons button:hover{
+  background:rgba(77,106,77,0.08);
+  color:var(--text);
+}
+
+.filter-buttons button.active{
+  background:#dbeadb;
+  color:#223522;
+}
+
+.filter-buttons button.active:hover{
+  background:#c7ddc7;
+}
+
+.add-item-row{
+  display:flex; gap:8px; margin-bottom:10px; margin-top:4px; padding:0 8px;
+}
+.add-item-row input{
+  padding:6px 8px; border-radius:8px; border:1px solid #b6c9b6;
+}
+.add-item-row input:first-child{ flex:1; }
+.add-item-row button{
+  padding:6px 10px; border-radius:8px; border:none; background:#4d6a4d; color:#fff; font-weight:600; cursor:pointer;
+}
+
+.footer-actions{
+  position:absolute; left:16px; right:16px; bottom:16px;
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;
+}
+
+.footer-actions button{
+  height:44px;
+  border:none;
+  border-radius:12px;
+  font-weight:800;
+  color:#fff;
+  cursor:pointer;
+  transition:background 0.15s ease, box-shadow 0.15s ease,
+             transform 0.12s ease;
+}
+
+.footer-actions button:hover{
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(0,0,0,.2);
+}
+
+.footer-actions .edit{
+  background:#718d71;
+}
+
+.footer-actions .edit:hover{
+  background:#5e765e;
+}
+
+/* Archive – jiná barva, víc vystoupne */
+.footer-actions .archive{
+  background:#6a8099;          /* modro-zelená, odlišná od pozadí */
+}
+
+.footer-actions .archive:hover{
+  background:#2c435d;
+}
+
+.footer-actions .delete{
+  background:var(--danger);
+}
+
+.footer-actions .delete:hover{
+  background:#a65353;
+}
+
+
+.back-btn{
+  border:none;
+  background:rgba(255,255,255,.9);
+  border-radius:999px;
+  padding:6px 12px;
+  font-size:13px;
+  cursor:pointer;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+  margin-bottom:8px;
+}
+
+.back-link{
+  position:absolute;
+  top:12px;
+  right:18px;
+  border:none;
+  font-size:13px;
+  color:var(--muted);
+  cursor:pointer;
+  border-radius:999px;
+  background:#dbeadb; 
+  color:#234023;
+}
+
+.back-chip{
+  position:absolute;
+  top:14px;
+  right:20px;
+  border:none;
+  border-radius:999px;
+  padding:4px 12px;
+  font-size:13px;                /* jen velikost, ne celý font */
+  cursor:pointer;
+  background:#dbeadb;
+  color:#223522;
+  /* tady už font-family mít nemusíš, Quicksand se bere z body,
+     ale klidně ho můžeš nechat: */
+  font-family:"Quicksand",sans-serif;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  box-shadow:0 2px 0 rgba(0,0,0,.04);
+  transition:background 0.15s ease, color 0.15s ease,
+             box-shadow 0.15s ease, transform 0.12s ease;
+}
+
+.back-chip:hover{
+  background:#c7ddc7;          /* stejné hover jako active filter */
+  transform:translateY(-0.5px);
+  box-shadow:0 6px 16px rgba(0,0,0,.12);
+}

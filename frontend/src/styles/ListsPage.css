@@ -1,0 +1,438 @@
+.lists-page {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  background: transparent;
+}
+
+.lists-shell {
+  width: min(720px, 96vw);
+}
+
+.lists-card {
+  background: radial-gradient(
+    140% 160% at 10% 0%,
+    #f7fff7 0%,
+    #eef8ee 45%,
+    #d9ecd9 100%
+  );
+  border-radius: var(--radius-lg);
+  padding: 22px 24px 26px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* nadpis */
+
+.lists-title {
+  margin: 0 0 14px;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-family: "Quicksand", sans-serif;
+}
+
+.lists-header-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+/* filtr jako v detailu, ale víc "chip" */
+
+.lists-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.lists-filter-label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.lists-filter-buttons {
+  display: inline-flex;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+}
+
+.lists-filter-buttons button{
+  border:none;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:13px;
+  cursor:pointer;
+  background:transparent;
+  color:var(--muted);
+  font-family:"Quicksand",sans-serif;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+
+.lists-filter-buttons button:hover{
+  background:rgba(77,106,77,0.08);
+  color:var(--text);
+}
+
+.lists-filter-buttons button.active{
+  background:var(--accent);
+  color:#fff;
+}
+
+.lists-filter-buttons button.active:hover{
+  background:#3f5c3f; /* o kousek tmavší zelená */
+}
+
+/* sekce s dlaždicemi */
+
+.lists-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+/* jedna dlaždice */
+
+.lists-tile {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.lists-tile-button {
+  flex: 1;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(231, 244, 232, 0.95)
+  );
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background 0.12s ease;
+}
+
+.lists-tile-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(219, 236, 219, 0.98)
+  );
+}
+
+.lists-tile-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* meta: badge + progress pill */
+
+.lists-tile-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.lists-badge-archived {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.lists-progress-text {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(77, 106, 77, 0.08);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* delete */
+
+.lists-tile-delete {
+  border: none;
+  border-radius: 999px;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  background: var(--danger);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.12s ease;
+}
+
+.lists-tile-delete:hover {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+
+/* shared label + empty */
+
+.lists-empty {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 4px 2px;
+}
+
+.lists-shared-label {
+  margin: 4px 2px 8px;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* CTA dole */
+
+.lists-create-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  min-width:220px;
+  border:none;
+  border-radius:999px;
+  padding:10px 18px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:700;
+  font-size:15px;
+  cursor:pointer;
+  box-shadow:0 6px 16px rgba(0,0,0,0.2);
+  font-family:"Quicksand",sans-serif;
+  margin:16px auto 0;
+  transition:background 0.15s ease, box-shadow 0.15s ease, transform 0.12s ease;
+}
+
+.lists-create-btn:hover{
+  background:#3f5c3f;
+  box-shadow:0 10px 22px rgba(0,0,0,0.24);
+  transform:translateY(-1px);
+}
+
+.lists-create-btn::before {
+  content: "+";
+  font-size: 18px;
+}
+
+/* MODAL – už máme, jen jemně sladíme */
+
+.lists-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(19, 25, 19, 0.35);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+}
+
+.lists-modal {
+  background: radial-gradient(
+    130% 160% at 0% 0%,
+    #f7fff7 0%,
+    #ffffff 45%,
+    #e8f3e8 100%
+  );
+  border-radius: 22px;
+  padding: 20px 18px;
+  width: min(520px, 90vw);
+  max-height: 80vh;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+}
+
+.lists-modal h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* zbytek modalu můžeš nechat tak, jak jsme měli — jen se bude chovat v novém „obalu“ */
+
+
+.lists-modal-form label{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  font-size:13px;
+  margin-bottom:12px;
+}
+
+.lists-modal-form input{
+  border-radius:10px;
+  border:1px solid #b6c9b6;
+  padding:6px 8px;
+}
+
+/* skupiny (items, members) */
+
+.lists-modal-group{
+  margin-bottom:12px;
+}
+
+.lists-modal-group-header{
+  font-size:13px;
+  margin-bottom:4px;
+  color:var(--muted);
+}
+
+.lists-modal-inline{
+  display:flex;
+  gap:6px;
+}
+
+.lists-modal-inline input{
+  flex:1;
+}
+
+.lists-modal-qty{
+  max-width:120px;
+}
+
+.lists-modal-addbtn{
+  border:none;
+  border-radius:999px;
+  width:32px;
+  height:32px;
+  font-size:18px;
+  line-height:1;
+  padding:0;
+  cursor:pointer;
+  background:#4d6a4d;
+  color:#fff;
+}
+
+/* seznam tagů (items/members) */
+
+.lists-modal-tags{
+  list-style:none;
+  padding:6px 0 0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  font-size:12px;
+}
+
+.lists-modal-tags li{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#eef8ec;
+}
+
+.lists-tag-name{
+  flex:1;
+  font-weight:500;
+}
+
+.lists-tag-qty{
+  min-width:60px;
+  text-align:right;
+  font-size:11px;
+  color:var(--muted);
+}
+
+.lists-modal-tags li button{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  font-size:12px;
+}
+
+/* akce */
+
+.lists-modal-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+  margin-top:8px;
+}
+
+.lists-modal-cancel,
+.lists-modal-confirm{
+  border:none;
+  border-radius:999px;
+  padding:6px 12px;
+  font-size:13px;
+  cursor:pointer;
+  font-family:"Quicksand",sans-serif;
+}
+
+.lists-modal-cancel{
+  background:#eef8ec;
+  color:#234023;
+}
+
+.lists-modal-confirm{
+  background:#4d6a4d;
+  color:#fff;
+}
+
+.lists-topbar-logout{
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom:10px;
+}
+
+/* logout button = chip style */
+.logout-chip{
+  border:none;
+  padding:6px 14px;
+  border-radius:999px;
+  background:#dbeadb;
+  color:#223522;
+  font-size:13px;
+  font-family:"Quicksand",sans-serif;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 2px 0 rgba(0,0,0,0.05);
+  transition:background 0.15s ease, box-shadow 0.15s ease,
+             transform 0.12s ease;
+}
+
+.logout-chip:hover{
+  background:#c7ddc7;
+  transform:translateY(-1px);
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}
+
