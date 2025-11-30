@@ -197,9 +197,8 @@
   background:#5e765e;
 }
 
-/* Archive – jiná barva, víc vystoupne */
 .footer-actions .archive{
-  background:#6a8099;          /* modro-zelená, odlišná od pozadí */
+  background:#6a8099;
 }
 
 .footer-actions .archive:hover{
@@ -246,12 +245,10 @@
   border:none;
   border-radius:999px;
   padding:4px 12px;
-  font-size:13px;                /* jen velikost, ne celý font */
+  font-size:13px;
   cursor:pointer;
   background:#dbeadb;
   color:#223522;
-  /* tady už font-family mít nemusíš, Quicksand se bere z body,
-     ale klidně ho můžeš nechat: */
   font-family:"Quicksand",sans-serif;
   display:inline-flex;
   align-items:center;
@@ -262,7 +259,7 @@
 }
 
 .back-chip:hover{
-  background:#c7ddc7;          /* stejné hover jako active filter */
+  background:#c7ddc7;
   transform:translateY(-0.5px);
   box-shadow:0 6px 16px rgba(0,0,0,.12);
 }

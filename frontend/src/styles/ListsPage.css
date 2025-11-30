@@ -24,8 +24,6 @@
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-/* nadpis */
-
 .lists-title {
   margin: 0 0 14px;
   text-align: left;
@@ -41,8 +39,6 @@
   align-items:center;
   margin-bottom:18px;
 }
-
-/* filtr jako v detailu, ale víc "chip" */
 
 .lists-filter-row {
   display: flex;
@@ -88,10 +84,8 @@
 }
 
 .lists-filter-buttons button.active:hover{
-  background:#3f5c3f; /* o kousek tmavší zelená */
+  background:#3f5c3f;
 }
-
-/* sekce s dlaždicemi */
 
 .lists-section {
   display: flex;
@@ -99,8 +93,6 @@
   gap: 10px;
   margin-bottom: 18px;
 }
-
-/* jedna dlaždice */
 
 .lists-tile {
   display: flex;
@@ -145,8 +137,6 @@
   font-weight: 600;
 }
 
-/* meta: badge + progress pill */
-
 .lists-tile-meta {
   display: flex;
   justify-content: space-between;
@@ -172,8 +162,6 @@
   font-size: 11px;
   font-weight: 500;
 }
-
-/* delete */
 
 .lists-tile-delete {
   border: none;
@@ -201,9 +189,6 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
-
-/* shared label + empty */
-
 .lists-empty {
   font-size: 13px;
   color: var(--muted);
@@ -216,8 +201,6 @@
   font-style: italic;
   color: var(--muted);
 }
-
-/* CTA dole */
 
 .lists-create-btn{
   display:inline-flex;
@@ -249,8 +232,6 @@
   content: "+";
   font-size: 18px;
 }
-
-/* MODAL – už máme, jen jemně sladíme */
 
 .lists-modal-backdrop {
   position: fixed;
@@ -284,9 +265,6 @@
   font-family: "Quicksand", sans-serif;
 }
 
-/* zbytek modalu můžeš nechat tak, jak jsme měli — jen se bude chovat v novém „obalu“ */
-
-
 .lists-modal-form label{
   display:flex;
   flex-direction:column;
@@ -300,8 +278,6 @@
   border:1px solid #b6c9b6;
   padding:6px 8px;
 }
-
-/* skupiny (items, members) */
 
 .lists-modal-group{
   margin-bottom:12px;
@@ -338,8 +314,6 @@
   background:#4d6a4d;
   color:#fff;
 }
-
-/* seznam tagů (items/members) */
 
 .lists-modal-tags{
   list-style:none;
@@ -379,8 +353,6 @@
   font-size:12px;
 }
 
-/* akce */
-
 .lists-modal-actions{
   display:flex;
   justify-content:flex-end;
@@ -414,7 +386,6 @@
   margin-bottom:10px;
 }
 
-/* logout button = chip style */
 .logout-chip{
   border:none;
   padding:6px 14px;

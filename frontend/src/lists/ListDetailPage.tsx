@@ -1,4 +1,3 @@
-// src/lists/ListDetailPage.tsx
 import React, { useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../styles/ListDetailPage.css";
